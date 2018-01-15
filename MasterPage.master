@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DatabaseDescriptionTransfer</title>
+    <link href='<%#ResolveUrl("~/Content/bootstrap.min.css")%>' rel="stylesheet" type="text/css" />
+    <link href='<%#ResolveUrl("~/Content/bootstrap.icon-large.min.css")%>' rel="stylesheet" type="text/css" />
+    <link href='<%#ResolveUrl("~/Content/p-loading.css")%>' rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src='<%#ResolveUrl("~/Scripts/jquery-1.10.2.min.js")%>'></script>
+    <script type="text/javascript" src='<%#ResolveUrl("~/Scripts/popper.min.js?")%>'></script>
+    <script type="text/javascript" src='<%#ResolveUrl("~/Scripts/bootstrap.min.js")%>'></script>
+    <script type="text/javascript" src='<%#ResolveUrl("~/Scripts/p-loading.js")%>'></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="container">
+            <h3 class="display-4">資料庫描述編輯器</h3>
+            <p>幫你的線上資料庫複製資料描述到正式站</p>
+            <p class="text-right">
+                <asp:Button ID="btnLogout" class="btn btn-danger btn-sm " OnClick="btnLogout_Click" runat="server" Text="登出" />
+            </p>
+
+            <%--            <p class="text-right"><a class="btn btn-primary btn-sm " href="#" role="button">操作說明</a></p>--%>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
